@@ -1,8 +1,14 @@
 <h1>Portfolio Items</h1>
 
+<a href="portfolios/new">Create New Item</a>
+
+<%= link_to "Create New Item", new_portfolio_path %>
+
 <% @portfolio_items.each do |port| %>
   <p><%= port.title %></p>
   <p><%= port.subtitle %></p>
   <p><%= port.body %></p>
   <p><%= image_tag port.thumb_image unless port.thumb_image.nil?%></p>
+  <p><%= link_to "Edit Portfolio Item", edit_portfolio_path(port.id) %>
+  <a href="portfolios/<%= port.id %>/edit">Edit Two </a>
 <% end %>
