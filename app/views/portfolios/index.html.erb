@@ -5,10 +5,10 @@
 <%= link_to "Create New Item", new_portfolio_path %>
 
 <% @portfolio_items.each do |port| %>
-  <p><%= link_to port.title, portfolio_path(port.id) %></p>
+  <p><%= link_to port.title, portfolio_path(port) %></p>
   <p><%= port.subtitle %></p>
   <p><%= port.body %></p>
   <p><%= image_tag port.thumb_image unless port.thumb_image.nil?%></p>
-  <p><%= link_to "Edit Portfolio Item", edit_portfolio_path(port.id) %>
-  <a href="portfolios/<%= port.id %>/edit">Edit Two </a>
+  <%= link_to "Edit Portfolio Item", edit_portfolio_path(port) %>
+  <%= link_to 'Delete portfolio item', portfolio_path(port), method: :delete, data: {confirm: 'Are you sure?'} %>
 <% end %>
