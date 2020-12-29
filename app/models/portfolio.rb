@@ -7,4 +7,13 @@ class Portfolio < ApplicationRecord
 
   #another way to filter on subtitle
   scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
+
+  #after_initialize happens after the "new" method in the controller.  after_create happens after the "create" method in the controller class
+  after_initialize :set_defaults
+
+  # the pipe means only set the value if the variable at the left side of the equal sign is nil.
+  def set_defaults
+    self.main_image ||= "http://placehold.it/600x400"
+    self.thumb_image ||= "http://placehold.it/350x200"
+  end
 end
