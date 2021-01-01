@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show]
+  # this will change the route for localhost:3000/angular
+  get 'angular', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'about', to: 'pages#about'
