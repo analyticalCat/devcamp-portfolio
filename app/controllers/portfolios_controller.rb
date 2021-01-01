@@ -14,13 +14,14 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
-      if @portfolio_item.save
+      if @portfolio_item.save 
         # the redirect changes the path to the list instead of show.
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' } # @portfolio_item will redirect to port's show page.
         format.json { render :show, status: :created, location: @portfolio_item }
