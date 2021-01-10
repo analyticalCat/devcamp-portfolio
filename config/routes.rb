@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show]
   # this will change the route for localhost:3000/angular
   get 'angular', to: 'portfolios#angular'
