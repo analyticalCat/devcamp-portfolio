@@ -1,5 +1,7 @@
 class PortfoliosController < ApplicationController
   before_action :set_port, only:[:show, :edit, :update, :destroy]
+  layout "portfolio"
+
   def index
     @portfolio_items = Portfolio.all
     # @portfolio_items = Portfolio.where(subtitle: "Ruby on Rails")
