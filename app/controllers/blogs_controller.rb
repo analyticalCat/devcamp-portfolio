@@ -7,12 +7,15 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
     # @blogs = Blog.limit(3)
     # this shows the first 3, not the latest 3
+    @page_title = "My Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   # before_action is executed before show for show, edit, update and destroy.  set_blog is called before coming to show
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
