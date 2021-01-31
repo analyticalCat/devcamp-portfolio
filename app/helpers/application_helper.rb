@@ -1,6 +1,9 @@
 module ApplicationHelper
   def sample_helper
-    "<p>my sample helper html</p>".html_safe
+    # this is not a good way to write code
+    #"<p>my sample helper html</p>".html_safe
+
+    content_tag(:div, "My content", class: "my-class")
   end
 
   def login_helper
@@ -10,6 +13,13 @@ module ApplicationHelper
       (link_to "Register", new_user_registration_path) +
       "<br>".html_safe +
       (link_to "Login", new_user_session_path)
+    end
+  end
+
+  def session_helper(layout_name)
+    if session[:source]
+      greeting = "Thanks for visiting my #{layout_name} from #{session[:source]}"
+      content_tag(:p, greeting, class: "source-greeting")
     end
   end
 end
