@@ -51,3 +51,7 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
 gem 'bootstrap', '~> 5.0.0.beta1'
+
+gem 'autoprefixer-rails'
+
+gem 'JZ_devcamp_view_tool', git: 'https://github.com/analyticalCat/view_tool_gem'
