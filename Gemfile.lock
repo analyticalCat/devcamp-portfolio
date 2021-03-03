@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/analyticalCat/view_tool_gem
+  revision: 88a0c9ba61b51523fac2688dc463b0dcf8f9328e
+  specs:
+    JZ_devcamp_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -209,6 +215,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  JZ_devcamp_view_tool!
   autoprefixer-rails
   bootsnap (>= 1.4.2)
   bootstrap (~> 5.0.0.beta1)

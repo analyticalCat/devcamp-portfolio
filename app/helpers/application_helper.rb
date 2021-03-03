@@ -22,4 +22,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+      JzDevcampViewTool::Renderer.copyright  'Jenn Zhang', 'All rights reserved'
+  end
 end
