@@ -55,3 +55,4 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'autoprefixer-rails'
 
 gem 'JZ_devcamp_view_tool', git: 'https://github.com/analyticalCat/view_tool_gem'
+gem 'petergate', '~> 1.7'
