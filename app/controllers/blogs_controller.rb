@@ -7,10 +7,10 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     # @blogs = Blog.limit(3)
     # this shows the first 3, not the latest 3
-    @page_title = "My Blog"
+    @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1

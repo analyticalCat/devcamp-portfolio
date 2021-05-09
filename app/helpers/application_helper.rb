@@ -24,6 +24,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-      JzDevcampViewTool::Renderer.copyright  'Jenn Zhang', 'All rights reserved'
+      JzDevcampViewTool::Renderer.copyright  'Gizmo Zhang', 'All rights reserved'
   end
 end
