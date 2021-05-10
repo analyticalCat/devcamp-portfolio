@@ -58,3 +58,4 @@ gem 'JZ_devcamp_view_tool', git: 'https://github.com/analyticalCat/view_tool_gem
 gem 'petergate', '~> 1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'jquery-rails'
