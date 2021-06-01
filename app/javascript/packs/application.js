@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("packs/html.sortable")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -21,5 +22,7 @@ require("channels")
 //= require bootstrap-sprockets
 
 //= require rails-ujs
+//= require jquery-ui
+//= require html.sortable
 //= require turbolinks
 //= require_tree
