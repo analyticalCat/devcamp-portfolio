@@ -10,13 +10,11 @@ require("channels")
 require("packs/html.sortable")
 require("jquery-ui")
 
-import 'bootstrap'
-import '../stylesheets/portfolios'
-
+ 
 $(function() {
 	$('.sortable').sortable();
 });
-alert("i am in application.js.")
+alert("function has run")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
