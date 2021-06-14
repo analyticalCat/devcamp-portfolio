@@ -1,10 +1,8 @@
+<!-- div class="album py-5 bg-light text-muted" -->
 <div class="album py-5 bg-light">
   <div class="container">
-
     <div class="row sortable">
-
-      <%= link_to "Create New Item", new_portfolio_path if logged_in?(:admin) %>
-
+      <!-- %= link_to "Create New Item", new_portfolio_path if logged_in?(:admin) % -->
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
   </div>

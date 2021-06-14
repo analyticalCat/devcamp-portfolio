@@ -10,11 +10,6 @@ require("channels")
 require("packs/html.sortable")
 require("jquery-ui")
 
- 
-$(function() {
-	$('.sortable').sortable();
-});
-alert("function has run")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -22,7 +17,6 @@ alert("function has run")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
@@ -32,3 +26,11 @@ alert("function has run")
 //= require html.sortable
 //= require turbolinks
 //= require_tree
+
+import 'jquery-ui'
+ 
+$(
+        () => {
+                $('.sortable').sortable()
+        }
+)
